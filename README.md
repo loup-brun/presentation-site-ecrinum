@@ -8,7 +8,7 @@ Pour construire la présentation à partir de sa source (ex. `document.md`), uti
 pandoc \
   -t revealjs \
   --self-contained \
-  -s document.md
+  -s document.md \
   -o presentation.html
 ```
 
