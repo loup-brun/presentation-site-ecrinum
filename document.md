@@ -5,6 +5,7 @@ author: Huguette Delisle
 
 # Config revael.js (supplémentaire pour le style)
 theme: simple
+hash: true
 css:
 - julia.css
 - fonts/merriweather/merriweather.css
@@ -14,7 +15,10 @@ Une diapo
 
 ---
 
-Une autre diapo avec plus de texte.
+## {background-image="https://upload.wikimedia.org/wikipedia/commons/5/5e/SEPTIZODIUM_Rome.jpg"}
+---
+
+## Une autre diapo avec plus de texte.
 
 1. un
 2. deux
@@ -26,3 +30,4 @@ Bouya!
 
 Bim bam boom!
 
+---

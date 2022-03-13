@@ -33,13 +33,15 @@
   <p class="author">Huguette Delisle</p>
 </section>
 
-<section class="slide level6">
+<section class="slide level2">
 
 <p>Une diapo</p>
 </section>
-<section class="slide level6">
-
-<p>Une autre diapo avec plus de texte.</p>
+<section id="section" class="slide level2" data-background-image="https://upload.wikimedia.org/wikipedia/commons/5/5e/SEPTIZODIUM_Rome.jpg">
+<h2 data-background-image="https://upload.wikimedia.org/wikipedia/commons/5/5e/SEPTIZODIUM_Rome.jpg"></h2>
+</section>
+<section id="une-autre-diapo-avec-plus-de-texte." class="slide level2">
+<h2>Une autre diapo avec plus de texte.</h2>
 <ol type="1">
 <li>un</li>
 <li>deux</li>
@@ -47,9 +49,12 @@
 </ol>
 <p>Bouya!</p>
 </section>
-<section class="slide level6">
+<section class="slide level2">
 
 <p>Bim bam boom!</p>
+</section>
+<section class="slide level2">
+
 </section>
     </div>
   </div>
@@ -67,6 +72,9 @@
       // https://revealjs.com/config/
       Reveal.initialize({
       
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
         // Push each slide change to the browser history
         history: true,
 
