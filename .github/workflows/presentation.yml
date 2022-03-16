@@ -16,9 +16,9 @@ jobs:
 
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --to=revealjs --output=output/presentation.html ${{ steps.files_list.outputs.files }}
+          args: --to=revealjs --output=public/presentation.html ${{ steps.files_list.outputs.files }}
           
       - uses: actions/upload-artifact@master
         with:
           name: output
-          path: output
+          path: public
