@@ -16,6 +16,7 @@ Une diapo
 ---
 
 ## {background-image="https://upload.wikimedia.org/wikipedia/commons/5/5e/SEPTIZODIUM_Rome.jpg"}
+
 ---
 
 ## Une autre diapo avec plus de texte.
