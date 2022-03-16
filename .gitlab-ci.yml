@@ -9,7 +9,7 @@ pages:
     - mkdir public  # create public dir
     - pandoc -t revealjs -s document.md -o public/presentation.html
     - pandoc -t revealjs --self-contained -s document.md -o public/presentation.contained.html
-    - cp *.css public/
+    - cp -r css public/css
     - cp -r fonts public/fonts
     - cp images public/images
   artifacts:

@@ -7,7 +7,7 @@ author: Huguette Delisle
 theme: simple
 hash: true
 css:
-- julia.css
+- css/julia.css
 - fonts/merriweather/merriweather.css
 ---
 
