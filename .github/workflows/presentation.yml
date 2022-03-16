@@ -6,16 +6,19 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - name: Create presentation (with Pandoc)
-        uses: docker://pandoc/core:2.9
-        with:
-          args: >- # allows you to break string into multiple lines
-            document.md
-            --to revealjs
-            --output public/presentation.html
-      - name: Copy files
-        run: |
-          cp -r css public/css
-          cp -r fonts public/fonts
-          cp -r images public/images
+      - uses: actions/checkout@v2
 
+      - name: create file list
+        id: files_list
+        run: |
+          # this will also include README.md
+          echo "::set-output name=files::document.md"
+
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: --to=revealjs --output=output/presentation.html ${{ steps.files_list.outputs.files }}
+          
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
