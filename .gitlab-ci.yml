@@ -6,8 +6,8 @@ pages:
     name: pandoc/latex
     entrypoint: ["/bin/sh", "-c"]
   script:
-    - pandoc -t revealjs -s document.md -o public/presentation.html
-    - pandoc -t revealjs --self-contained -s document.md -o public/presentation.contained.html
+    - pandoc -t revealjs -o public/presentation.html document.md
+    - pandoc -t revealjs --self-contained -o public/presentation.contained.html document.md
     - cp -r css public/css
     - cp -r fonts public/fonts
     - cp -r images public/images
