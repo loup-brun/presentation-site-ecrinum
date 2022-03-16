@@ -6,8 +6,8 @@ pages:
     name: pandoc/core
     entrypoint: ["/bin/sh", "-c"]
   script:
-    - pandoc -t revealjs -o public/presentation.html document.md
-    - pandoc -t revealjs --self-contained -o public/presentation.contained.html document.md
+    - pandoc -t revealjs -s -o public/presentation.html document.md
+    - pandoc -t revealjs -s --self-contained -o public/presentation.contained.html document.md
     - cp -r css public/css
     - cp -r fonts public/fonts
     - cp -r images public/images
