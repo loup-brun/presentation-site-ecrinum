@@ -11,7 +11,7 @@ pages:
     - pandoc -t revealjs --self-contained -s document.md -o public/presentation.contained.html
     - cp -r css public/css
     - cp -r fonts public/fonts
-    - cp images public/images
+    - cp -r images public/images
   artifacts:
     paths:
       - public
