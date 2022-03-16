@@ -1,14 +1,13 @@
 ---
 
-presentation:
+pages:
   image:
     name: pandoc/latex
     entrypoint: ["/bin/sh", "-c"]
   script:
-    - echo "Lorem ipsum" > lorem_1.md  # create two example files
-    - echo "dolor sit amet" > lorem_2.md
     - mkdir output  # create output dir
-    - pandoc -t revealjs --self-contained -s document.md -o output/presentation.html
+    - pandoc -t revealjs -s document.md -o output/presentation.html
+    - pandoc -t revealjs --self-contained -s document.md -o output/presentation.contained.html
   artifacts:
     paths:
       - output
