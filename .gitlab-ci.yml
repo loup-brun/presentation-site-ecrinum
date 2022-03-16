@@ -1,4 +1,5 @@
 ---
+# taken from https://gitlab.com/pandoc/pandoc-ci-example
 
 pages:
   image:
