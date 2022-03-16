@@ -3,7 +3,7 @@
 
 pages:
   image:
-    name: pandoc/latex
+    name: pandoc/core
     entrypoint: ["/bin/sh", "-c"]
   script:
     - pandoc -t revealjs -o public/presentation.html document.md
