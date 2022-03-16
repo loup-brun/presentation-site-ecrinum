@@ -6,13 +6,16 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - run: |
-          cp -r css public/css
-          cp -r fonts public/fonts
-          cp -r images public/images
+      - name: Create presentation (with Pandoc)
         uses: docker://pandoc/core:2.9
         with:
           args: >- # allows you to break string into multiple lines
             --to revealjs
             --source document.md
             --output public/presentation.html
+      - name: Copy files
+        run: |
+          cp -r css public/css
+          cp -r fonts public/fonts
+          cp -r images public/images
+
