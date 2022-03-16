@@ -8,11 +8,7 @@ presentation:
     - echo "Lorem ipsum" > lorem_1.md  # create two example files
     - echo "dolor sit amet" > lorem_2.md
     - mkdir output  # create output dir
-    - pandoc \
-        -t revealjs \
-        --self-contained \
-        -s document.md \
-        -o output/presentation.html
+    - pandoc -t revealjs --self-contained -s document.md -o output/presentation.html
   artifacts:
     paths:
       - output
