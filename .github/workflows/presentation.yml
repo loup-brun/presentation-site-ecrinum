@@ -7,9 +7,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        with: 
-          submodules: recursive
 
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+      
       - name: create file list
         id: files_list
         run: |
