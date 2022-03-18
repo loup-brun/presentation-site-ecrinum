@@ -20,7 +20,6 @@ jobs:
           args: >-
             --to=revealjs
             -s
-            -V revealjs-url=https://unpkg.com/reveal.js@^4/
             --output=public/index.html
             ${{ steps.files_list.outputs.files }}
 
@@ -30,7 +29,6 @@ jobs:
         with:
           args: >-
             --to=revealjs
-            -V revealjs-url=https://unpkg.com/reveal.js@^4/
             -s
             --self-contained
             --output=public/contained.html
