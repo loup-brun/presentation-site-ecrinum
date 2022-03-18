@@ -11,12 +11,11 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          # this will also include README.md
-          echo "::set-output name=files::document.md"
+          echo "::set-output name=files::presentation.md"
 
       - uses: docker://pandoc/core:2.9
         with:
-          args: --to=revealjs --output=presentation.html ${{ steps.files_list.outputs.files }}
+          args: --to=revealjs --output=index.html ${{ steps.files_list.outputs.files }}
       - uses: actions/upload-artifact@master
         with:
           name: output
