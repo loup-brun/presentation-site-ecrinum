@@ -27,7 +27,7 @@ jobs:
             --output=public/index.html
             presentation.md
 
-       create a self-contained file too
+      # create a self-contained file too
       - name: Build  self-contained presentation
         uses: docker://pandoc/core
         with:
