@@ -34,13 +34,23 @@ navigationMode: linear
 
 ## Construire
 
-Pour construire la présentation à partir de sa source (ex. `document.md`), utiliser pandoc avec les options suivantes:
+Pour construire la présentation à partir de sa source (ex. `presentation.md`), utiliser pandoc avec les options suivantes:
 
 ```bash
 pandoc \
-  -t revealjs \
+  --to=revealjs \
   --self-contained \
-  -s document.md \
-  -o presentation.html
+  --standalone \
+  --output=presentation.html
+  presentation.md
 ```
+
+## Déploiement
+
+### Avec GitLab Pages
+
+GitLab Pages est configuré pour produire 2 documents :
+
+- https://<user>.gitlab.io/<repo>/ : la présentation HTML régulière
+- https://<user>.gitlab.io/<repo>/contained.html : la présentation empaquetée en 1 seul fichier (avec l’option pandoc `--self-contained`)
 
