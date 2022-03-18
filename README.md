@@ -93,13 +93,13 @@ pandoc \
 
 GitLab Pages est configuré pour produire 2 documents :
 
-- https://<USER>.gitlab.io/<REPO>/ : la présentation HTML régulière
-- https://<USER>.gitlab.io/<REPO>/contained.html : la présentation empaquetée en 1 seul fichier (avec l’option pandoc `--self-contained`)
+- https://USER.gitlab.io/REPO/ : la présentation HTML régulière
+- https://USER.gitlab.io/REPO/contained.html : la présentation empaquetée en 1 seul fichier (avec l’option pandoc `--self-contained`)
 
 ### Avec GitHub Pages
 
 GitHub Pages est configuré pour produire 2 documents :
 
-- https://<USER>.github.io/<REPO>/ : la présentation HTML régulière
-- https://<USER>.gitlab.io/<REPO>/contained.html : la présentation empaquetée en 1 seul fichier (avec l’option pandoc `--self-contained`)
+- https://USER.github.io/REPO/ : la présentation HTML régulière
+- https://USER.gitlab.io/REPO/contained.html : la présentation empaquetée en 1 seul fichier (avec l’option pandoc `--self-contained`)
 
