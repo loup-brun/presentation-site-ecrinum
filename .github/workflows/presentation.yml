@@ -30,20 +30,20 @@ jobs:
         with:
           args: >-
             --to=revealjs
-            -s
+            --standalone
             --output=public/index.html
             ${{ steps.files_list.outputs.files }}
 
       # create a self-contained file too
-      - name: Build  self-contained presentation
-        uses: docker://pandoc/core:2.9
-        with:
-          args: >-
-            --to=revealjs
-            -s
-            --self-contained
-            --output=public/contained.html
-            ${{ steps.files_list.outputs.files }}
+      #- name: Build  self-contained presentation
+      #  uses: docker://pandoc/core:2.9
+      #  with:
+      #    args: >-
+      #      --to=revealjs
+      #      --standalone
+      #      --self-contained
+      #      --output=public/contained.html
+      #      ${{ steps.files_list.outputs.files }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
