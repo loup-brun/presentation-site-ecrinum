@@ -23,9 +23,9 @@ jobs:
       - name: copy files
         id: copy_files
         run: |
-          cp css public/css
-          cp fonts public/fonts
-          cp images public/images
+          cp -r css public/css
+          cp -r fonts public/fonts
+          cp -r images public/images
       - uses: actions/upload-artifact@master
         with:
           name: output
