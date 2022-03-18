@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with: 
-          submodules: true
+          submodules: recursive
 
       - name: create file list
         id: files_list
