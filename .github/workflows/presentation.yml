@@ -10,11 +10,6 @@ jobs:
 
       - name: Checkout submodules
         run: git submodule update --init --recursive
-      
-      - name: create file list
-        id: files_list
-        run: |
-          echo "::set-output name=files::presentation.md"
 
       - name: Copy asset files
         id: copy_files
@@ -32,7 +27,7 @@ jobs:
             --to=revealjs
             --standalone
             --output=public/index.html
-            ${{ steps.files_list.outputs.files }}
+            presentation.md
 
       # create a self-contained file too
       #- name: Build  self-contained presentation
@@ -43,7 +38,7 @@ jobs:
       #      --standalone
       #      --self-contained
       #      --output=public/contained.html
-      #      ${{ steps.files_list.outputs.files }}
+      #      presentation.md
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
