@@ -21,7 +21,7 @@ jobs:
 
       # create the slideshow as a regular index.html file
       - name: Build presentation
-        uses: docker://pandoc/core:2.9
+        uses: docker://pandoc/core
         with:
           args: >-
             --to=revealjs
@@ -31,7 +31,7 @@ jobs:
 
       # create a self-contained file too
       #- name: Build  self-contained presentation
-      #  uses: docker://pandoc/core:2.9
+      #  uses: docker://pandoc/core
       #  with:
       #    args: >-
       #      --to=revealjs
