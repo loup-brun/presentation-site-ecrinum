@@ -13,6 +13,9 @@ jobs:
         run: |
           echo "::set-output name=files::presentation.md"
 
+      - name: install reveal.js
+        run: |
+          git submodule update
       # create the slideshow as a regular index.html file
       - name: Build presentation
         uses: docker://pandoc/core:2.9
