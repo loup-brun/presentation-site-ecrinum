@@ -1,15 +1,69 @@
-# Présentation Reveal Julia
+# Modèle [Reveal.js](https://revealjs.com/) + [Pandoc](https://pandoc.org/)
 
-## Images et sections
+## Préambule d’un document de présentation 
 
-Pour faire des diapositives avec des images en arrière-plan en bénéficiant de la syntaxe abbrégée offerte par Pandoc, bien délimiter chaque section avec des en-têtes cohérents:
+Toutes les [options Reveal.js](https://revealjs.com/config/) sont permises dans l’en-tête du document.
 
 ```markdown
+---
+# Sur la première diapositive...
+# titre en gros
+title: "Une présentation"
+
+# sous-titre plus petit
+subtitle: "Sous-titre"
+
+# bonne pratique: mettre son nom
+author: "Huguette Delisle"
+
+# bonne pratique: mettre l’établissement
+institute: "Académie du crime de Ste-Foy"
+
+# bonne pratique: mettre la date
+date: 2022-02-22
+
+# Options Reveal.js
+###################
+# pour ajouter le référent de la diapo dans la barre d’adresse
+hash: true
+
+# pour naviguer uniquement de gauche à droite, sans haut-bas
+navigationMode: linear
+```
+
+## Rédaction des diapositives
+
+Rien de plus simple : séparer chaque diapositive d’une nouvelle ligne avec trois traits `---`, comme ceci :
+
+```markdown
+
 ## Une diapo
 
 ---
 
-## {background-image="chemin-vers-mon-image.jpg"}
+## Une autre diapo
+
+Avec un peu de texte...
+
+---
+
+## Encore une diapo
+
+Avec plus de texte...
+
+```
+
+## Sections et images
+
+Pour faire des diapositives avec des images en arrière-plan en bénéficiant de la syntaxe abbrégée offerte par Pandoc, bien délimiter chaque section avec des en-têtes cohérents:
+
+```markdown
+
+## Une diapo
+
+---
+
+## {background-image="images/chemin-vers-mon-image.jpg" background-size="cover" background-position="center center"}
 
 ---
 
@@ -19,18 +73,6 @@ Pour faire des diapositives avec des images en arrière-plan en bénéficiant de
 
 ```
 
-
-## En-tête du document
-
-Toutes les [options Reveal.js](https://revealjs.com/config/) sont permises dans l’en-tête du document.
-
-```yaml
-# pour ajouter le référent de la diapo dans la barre d’adresse
-hash: true
-
-# pour naviguer uniquement de gauche à droite, sans haut-bas
-navigationMode: linear
-```
 
 ## Construire
 
