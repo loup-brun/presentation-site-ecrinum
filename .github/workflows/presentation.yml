@@ -15,7 +15,17 @@ jobs:
 
       - uses: docker://pandoc/core:2.9
         with:
-          args: --to=revealjs --output=index.html ${{ steps.files_list.outputs.files }}
+          args: >-
+            --to=revealjs
+            -s
+            --output=public/index.html
+            ${{ steps.files_list.outputs.files }}
+      - name: copy files
+        id: copy_files
+        run: |
+          cp css public/css
+          cp fonts public/fonts
+          cp images public/images
       - uses: actions/upload-artifact@master
         with:
           name: output
@@ -24,4 +34,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./public
