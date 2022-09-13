@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Merriweather;
+    src: url('Merriweather-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url('Merriweather-Italic.otf') format('opentype');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url('Merriweather-Bold.otf') format('opentype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url('Merriweather-BoldItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: 700;
+}

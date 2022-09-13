@@ -1,0 +1,21 @@
+/* Variables CSS de revealjs, exposées là: */
+/* https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss */
+:root {
+    --r-heading1-size: 2.75em;
+    --r-main-font: Merriweather, Palatino, serif;
+    --r-heading-font: Merriweather, Palatino, serif;
+    --r-link-color: #0776ff;
+    /*--r-link-color: cornflowerblue;*/
+}
+
+.sonnet {
+    text-align: left;
+    padding: 0 1em;
+
+    /* La taille du texte pourra être ajustée au niveau <div>, mais voici une base */
+    font-size: 75%;
+}
+
+.strophe {
+
+}
