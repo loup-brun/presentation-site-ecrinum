@@ -1,0 +1,23 @@
+/* Variables CSS de revealjs, exposées là: */
+/* https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss */
+:root {
+    --r-heading1-size: 2.5em;
+    --r-main-font: standard-web, sans-serif;
+    --r-heading-font: standard-web, sans-serif;
+    --r-link-color: #F8CECD;
+    --r-link-color-hover: #ef8f8d;
+    --r-main-font-size: 28px;
+    --r-main-color: #fff;
+    --r-heading-color: #fff;
+    --r-background-color: #121149;
+    /*--r-link-color: cornflowerblue;*/
+}
+
+ul li {
+  margin-top: .75em;
+}
+
+mark {
+  background-color: rgba(248, 206, 205, 0.3);
+  color: inherit;
+}
